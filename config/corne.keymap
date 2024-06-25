@@ -780,10 +780,10 @@
 
         qwerty_layer {
             bindings = <
-&trans  &change_window1_mac  &change_window2_mac  &change_window3_mac  &change_window4_mac  &change_window5_mac    &trans   &trans      &trans      &trans   &trans  &trans
-&trans  &trans               &trans               &move_app_prev_mac   &move_app_next_mac   &toggle_sticky_app     &ctrl_h  &ctrl_j     &ctrl_k     &ctrl_l  &trans  &trans
-&trans  &trans               &trans               &trans               &trans               &trans                 &trans   &tmux_prev  &tmux_next  &trans   &trans  &trans
-                                                  &trans               &to 0                &trans                 &trans   &trans      &trans
+&trans  &change_window1_mac  &change_window2_mac  &change_window3_mac  &change_window4_mac  &change_window5_mac    &trans        &trans      &trans      &trans   &trans  &trans
+&trans  &trans               &trans               &move_app_prev_mac   &move_app_next_mac   &toggle_sticky_app     &ctrl_h       &ctrl_j     &ctrl_k     &ctrl_l  &trans  &trans
+&trans  &trans               &trans               &trans               &trans               &trans                 &tmux_search  &tmux_prev  &tmux_next  &trans   &trans  &trans
+                                                  &trans               &to 0                &trans                 &trans        &trans      &trans
             >;
         };
 
