@@ -645,6 +645,46 @@
 
             label = "TMUX_PREV";
         };
+
+        dit: dit {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp D &kp I &kp T>;
+
+            label = "DIT";
+        };
+
+        zt: zt {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp Z &kp T>;
+
+            label = "ZT";
+        };
+
+        zb: zb {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp Z &kp B>;
+
+            label = "ZB";
+        };
+
+        tmux_search: tmux_search {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_CONTROL>,
+                <&macro_tap>,
+                <&kp A>,
+                <&macro_release>,
+                <&kp LEFT_CONTROL>,
+                <&macro_tap>,
+                <&kp S>;
+
+            label = "TMUX_SEARCH";
+        };
     };
 
     behaviors {
@@ -723,8 +763,8 @@
         fun_layer {
             bindings = <
 &trans  &kp EXCLAMATION  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_0         &kp PRINTSCREEN  &kp CARET       &kp DOLLAR    &kp PAGE_DOWN  &kp PAGE_UP  &trans
-&trans  &trans           &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp C_VOLUME_UP      &kp LEFT_ARROW   &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT      &trans       &trans
-&trans  &trans           &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp C_VOLUME_DOWN    &kp K_COPY       &kp K_PASTE     &trans        &trans         &trans       &trans
+&trans  &kp TAB          &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp C_VOLUME_UP      &kp LEFT_ARROW   &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT      &trans       &trans
+&trans  &stab            &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp C_VOLUME_DOWN    &kp K_COPY       &kp K_PASTE     &trans        &trans         &trans       &trans
                                        &kp LGUI      &to 0         &kp SPACE            &trans           &trans          &trans
             >;
         };
@@ -759,7 +799,7 @@
         layer_6 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &daq    &dab    &dat    &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &diq    &dib    &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &diq    &dib    &dit    &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
                         &trans  &to 0   &trans    &trans  &trans  &trans
             >;
@@ -767,10 +807,10 @@
 
         layer_7 {
             bindings = <
-&trans  &trans  &trans  &stab   &kp TAB  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &kp B   &kp E    &kp W     &trans  &ctrld  &ctrlu  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans   &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &to 0    &trans    &trans  &trans  &trans
+&trans  &trans  &trans  &stab   &kp TAB  &zt      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &kp B   &kp E    &kp W    &trans  &ctrld  &ctrlu  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans   &zb      &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &to 0    &zz      &trans  &trans  &trans
             >;
         };
 
