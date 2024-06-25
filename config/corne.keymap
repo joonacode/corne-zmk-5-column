@@ -126,6 +126,228 @@
 
     conditional_layers { compatible = "zmk,conditional-layers"; };
 
+    macros {
+        change_window1: change_window1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_SHIFT &kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp Q>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT &kp LEFT_ALT>;
+
+            label = "CHANGE_WINDOW1";
+        };
+
+        change_window2: change_window2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_SHIFT &kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp W>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT &kp LEFT_ALT>;
+
+            label = "CHANGE_WINDOW2";
+        };
+
+        change_window3: change_window3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_SHIFT &kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp E>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT &kp LEFT_ALT>;
+
+            label = "CHANGE_WINDOW3";
+        };
+
+        change_window4: change_window4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_SHIFT &kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp R>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT &kp LEFT_ALT>;
+
+            label = "CHANGE_WINDOW4";
+        };
+
+        change_desktop1: change_desktop1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_SHIFT &kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp NUMBER_1>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT &kp LEFT_ALT>;
+
+            label = "CHANGE_DESKTOP1";
+        };
+
+        change_desktop2: change_desktop2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_SHIFT &kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp NUMBER_2>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT &kp LEFT_ALT>;
+
+            label = "CHANGE_DESKTOP2";
+        };
+
+        change_desktop3: change_desktop3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_SHIFT &kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp NUMBER_3>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT &kp LEFT_ALT>;
+
+            label = "CHANGE_DESKTOP3";
+        };
+
+        change_desktop4: change_desktop4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_SHIFT &kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp NUMBER_4>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT &kp LEFT_ALT>;
+
+            label = "CHANGE_DESKTOP4";
+        };
+
+        move_to_w1: move_to_w1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_SHIFT &kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp A>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT &kp LEFT_ALT>;
+
+            label = "MOVE_TO_W1";
+        };
+
+        move_to_w2: move_to_w2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_SHIFT &kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp S>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT &kp LEFT_ALT>;
+
+            label = "MOVE_TO_W2";
+        };
+
+        move_to_w3: move_to_w3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_SHIFT &kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp D>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT &kp LEFT_ALT>;
+
+            label = "MOVE_TO_W3";
+        };
+
+        move_to_w4: move_to_w4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_SHIFT &kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp F>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT &kp LEFT_ALT>;
+
+            label = "MOVE_TO_W4";
+        };
+    };
+
+    behaviors {
+        shift: shift {
+            compatible = "zmk,behavior-sticky-key";
+            label = "SHIFT";
+            bindings = <&kp>;
+            #binding-cells = <1>;
+            release-after-ms = <(-1)>;
+            quick-release;
+        };
+
+        layertap: layertap {
+            compatible = "zmk,behavior-sticky-key";
+            label = "LAYERTAP";
+            bindings = <&mo>;
+            #binding-cells = <1>;
+            release-after-ms = <(-1)>;
+        };
+
+        hmr: hmr {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HMR";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            flavor = "tap-preferred";
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <1 4 5 13 14 15 16 17 25 26 27 28 29 2 3 36 37 38 39 40 41>;
+        };
+
+        hml: hml {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HML";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            flavor = "tap-preferred";
+            hold-trigger-key-positions = <10 6 7 8 9 10 18 19 20 21 22 30 31 32 33 34 39 40 41 38 37 36>;
+            hold-trigger-on-release;
+        };
+
+        vim_tap1: vim_tap1 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "VIM_TAP1";
+            #binding-cells = <0>;
+            bindings = <&layertap 1>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
