@@ -781,10 +781,10 @@
 
         colemak_layer {
             bindings = <
-&none  &kp Q  &kp W  &kp F             &kp P         &kp B          &kp J        &kp L                      &kp U             &kp Y    &kp SEMICOLON  &none
-&none  &kp A  &kp R  &kp S             &kp T         &kp G          &kp M        &kp N                      &kp E             &kp I    &kp O          &none
-&none  &kp Z  &kp X  &kp C             &kp D         &kp V          &kp K        &kp H                      &kp COMMA         &kp DOT  &kp FSLH       &none
-                     &kp LEFT_CONTROL  &kp LEFT_GUI  &lt 2 SPACE    &lt 1 ENTER  &mt RIGHT_SHIFT BACKSPACE  &mt LEFT_ALT ESC
+&none  &kp Q                &kp W            &kp F            &kp P              &kp B          &kp J      &kp L               &kp U            &kp Y             &kp SEMICOLON         &none
+&none  &hml A LEFT_CONTROL  &hml R LEFT_ALT  &hml S LGUI      &hml T LEFT_SHIFT  &lt 8 G        &kp M      &hmr N RIGHT_SHIFT  &hmr E RGUI      &hmr I RIGHT_ALT  &hmr O RIGHT_CONTROL  &none
+&none  &kp Z                &kp X            &kp C            &kp D              &kp V          &kp K      &kp H               &kp COMMA        &kp DOT           &kp FSLH              &none
+                                             &lt 4 BACKSPACE  &vim_tap1          &key_repeat    &kp ENTER  &lt 2 SPACE         &lt 7 BACKSPACE
             >;
         };
 
@@ -821,6 +821,42 @@
 &trans  &kp A  &kp S  &kp D             &kp F         &kp G          &kp H        &kp J                     &kp K              &kp L    &kp SEMI  &trans
 &trans  &kp Z  &kp X  &kp C             &kp V         &kp B          &kp N        &kp M                     &kp COMMA          &kp DOT  &kp FSLH  &trans
                       &kp LEFT_CONTROL  &kp LEFT_GUI  &lt 2 SPACE    &lt 1 ENTER  &mt LEFT_SHIFT BACKSPACE  &mt RIGHT_ALT ESC
+            >;
+        };
+
+        layer_5 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans        &caq    &cab    &cat    &trans  &trans
+&trans  &trans  &vyap   &vyo    &vyp    &vdb      &ciw          &ciq    &cib    &cit    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &change_word  &trans  &trans  &trans  &trans  &trans
+                        &trans  &to 0   &trans    &layertap 6   &mo 3   &trans
+            >;
+        };
+
+        layer_6 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &daq    &dab    &dat    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &diq    &dib    &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &to 0   &trans    &trans  &trans  &trans
+            >;
+        };
+
+        layer_7 {
+            bindings = <
+&trans  &trans  &trans  &stab   &kp TAB  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &kp B   &kp E    &kp W     &trans  &ctrld  &ctrlu  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans   &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &to 0    &trans    &trans  &trans  &trans
+            >;
+        };
+
+        layer_8 {
+            bindings = <
+&trans  &trans  &trans  &kp ESC        &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &kp BACKSPACE  &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans         &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans         &kp SPACE  &kp ENTER    &trans  &trans  &trans
             >;
         };
     };
