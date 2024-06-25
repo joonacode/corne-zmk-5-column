@@ -745,7 +745,7 @@
         colemak_layer {
             bindings = <
 &none  &kp Q                &kp W            &kp F            &kp P              &kp B          &kp J      &kp L               &kp U            &kp Y             &kp SEMICOLON         &none
-&none  &hml A LEFT_CONTROL  &hml R LEFT_ALT  &hml S LGUI      &hml T LEFT_SHIFT  &lt 8 G        &kp M      &hmr N RIGHT_SHIFT  &hmr E RGUI      &hmr I RIGHT_ALT  &hmr O RIGHT_CONTROL  &none
+&none  &hml LEFT_CONTROL A  &hml LEFT_ALT R  &hml LGUI S      &hml LEFT_SHIFT T  &lt 8 G        &kp M      &hmr RIGHT_SHIFT N  &hmr RGUI E      &hmr RIGHT_ALT I  &hmr RIGHT_CONTROL O  &none
 &none  &kp Z                &kp X            &kp C            &kp D              &kp V          &kp K      &kp H               &kp COMMA        &kp DOT           &kp FSLH              &none
                                              &lt 4 BACKSPACE  &vim_tap1          &key_repeat    &kp ENTER  &lt 2 SPACE         &lt 7 BACKSPACE
             >;
