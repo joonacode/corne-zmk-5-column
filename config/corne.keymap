@@ -294,6 +294,182 @@
 
             label = "MOVE_TO_W4";
         };
+
+        move_to_d1: move_to_d1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_SHIFT &kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp Z>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT &kp LEFT_ALT>;
+
+            label = "MOVE_TO_D1";
+        };
+
+        move_to_d2: move_to_d2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_SHIFT &kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp X>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT &kp LEFT_ALT>;
+
+            label = "MOVE_TO_D2";
+        };
+
+        move_to_d3: move_to_d3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_SHIFT &kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp C>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT &kp LEFT_ALT>;
+
+            label = "MOVE_TO_D3";
+        };
+
+        toggle_sticky_app: toggle_sticky_app {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_SHIFT &kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp L>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT &kp LEFT_ALT>;
+
+            label = "TOGGLE_STICKY_APP";
+        };
+
+        cib: cib {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp C &kp I &kp B>;
+
+            label = "CIB";
+        };
+
+        cab: cab {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp C &kp A &kp B>;
+
+            label = "CAB";
+        };
+
+        ciq: ciq {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp C &kp I &kp Q>;
+
+            label = "CIQ";
+        };
+
+        caq: caq {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp C &kp A &kp Q>;
+
+            label = "CAQ";
+        };
+
+        cat: cat {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp C &kp A &kp T>;
+
+            label = "CAT";
+        };
+
+        cit: cit {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp C &kp I &kp T>;
+
+            label = "CIT";
+        };
+
+        dib: dib {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp D &kp I &kp B>;
+
+            label = "DIB";
+        };
+
+        dab: dab {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp D &kp A &kp B>;
+
+            label = "DAB";
+        };
+
+        daq: daq {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp D &kp A &kp Q>;
+
+            label = "DAQ";
+        };
+
+        diq: diq {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp D &kp I &kp Q>;
+
+            label = "DIQ";
+        };
+
+        dat: dat {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp D &kp A &kp T>;
+
+            label = "DAT";
+        };
+
+        vyap: vyap {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp V &kp Y &kp A &kp P>;
+
+            label = "VYAP";
+        };
+
+        vyo: vyo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp V &kp Y &kp O>;
+
+            label = "VYO";
+        };
+
+        vyp: vyp {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp V &kp Y &kp P>;
+
+            label = "VYP";
+        };
+
+        vdb: vdb {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp V &kp D &kp B>;
+
+            label = "VDB";
+        };
     };
 
     behaviors {
